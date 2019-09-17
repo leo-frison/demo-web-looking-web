@@ -1,0 +1,40 @@
+.hero {
+  margin-top: 150px;
+
+  &__title {
+    color: white;
+    font-size: 60px;
+    letter-spacing: -2px;
+    position: relative;
+    overflow: hidden;
+    width: max-content;
+    animation: fade-in .8s forwards;
+    animation-delay: 1s;
+    opacity: 0;
+
+    &:before {
+      content: '';
+      width: 0%;
+      background: black;
+      position: absolute;
+      height: 40px;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      animation: slide-left 1s cubic-bezier(1, 0, 0, 1) forwards;
+      animation-delay: 1.2s;
+    }
+
+    &--delay {
+      animation-delay: 2s;
+      &:before {
+        animation-delay: 2.2s;
+      }
+    }
+  }
+}
+
+@keyframes slide-left {
+  from { width: 0%; }
+  to { width: 100%; }
+}
