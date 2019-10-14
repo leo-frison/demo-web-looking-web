@@ -1,16 +1,25 @@
 import * as React from 'react'
+import { useState } from 'react'
 import scrollToElement from 'scroll-to-element'
 import './styles.scss'
 
 interface LinkProps {
   link: string;
   title: string;
+  onClick: () => void;
 }
 
-const Link: React.FunctionComponent<LinkProps> = ({ link, title }) => {
+const Link: React.FunctionComponent<LinkProps> = ({ link, title, onClick }) => {
   const strollTo = (location: string) => (): void => {
-    scrollToElement(location);
+    onClick()
+
+    scrollToElement(location, {
+      offset: 0,
+      ease: 'inOutQuint',
+	    duration: 1500,
+    })
   }
+
 
   return (
     <a href={link} onClick={strollTo(link)} className="header__link">
@@ -19,40 +28,59 @@ const Link: React.FunctionComponent<LinkProps> = ({ link, title }) => {
   )
 }
 
-const Header: React.FunctionComponent = () => (
-  <header className="header">
-    <nav className="header__wrapper container">
-      <ul className="header__list">
-        <li className="header__item">
-          <Link link="#customer" title="Customers" />
-        </li>
+const Header: React.FunctionComponent = () => {
+  const [showMenu, setMenuVisibility] = useState(false)
+  const headerClass = showMenu ? 'header--active' : ''
+  const headerWrapperClass = showMenu ? 'header__wrapper--active' :  ''
 
-        <li className="header__item">
-          <Link link="#techniques" title="Techniques" />
-        </li>
+  const setMenuState = () => setMenuVisibility(!showMenu)
+  const hideMenu = () => setMenuVisibility(false)
 
-        <li className="header__item">
-          <Link link="#vision" title="Vision" />
-        </li>
+  return (
+    <header className={`header ${headerClass}`}>
+      <nav className="header__mobile">
+        <h1 className="header__logo header__logo-mobile visually-hidden">
+          Techmill
+        </h1>
 
-        <li className="header__item header__margin">
-          <h1 className="header__logo visually-hidden">Techmill</h1>
-        </li>
+        <button className="header__hamburger" onClick={setMenuState}>
+        </button>
+      </nav>
 
-        <li className="header__item">
-          <Link link="#solutions" title="Solutions" />
-        </li>
+      <nav className={`header__wrapper container ${headerWrapperClass}`}>
+        <ul className="header__list">
+          <li className="header__item">
+            <Link link="#customers" title="Customers" onClick={hideMenu} />
+          </li>
 
-        <li className="header__item">
-          <Link link="#innovation" title="Inovation" />
-        </li>
+          <li className="header__item">
+            <Link link="#tools" title="Tools" onClick={hideMenu} />
+          </li>
 
-        <li>
-          <Link link="#contact" title="Contact" />
-        </li>
-      </ul>
-    </nav>
-  </header>
-)
+          {/* <li className="header__item">
+            <Link link="#vision" title="Vision" onClick={hideMenu} />
+          </li> */}
 
-export default Header
+          <li className="header__item header__margin">
+            <h1 className="header__logo visually-hidden">Techmill</h1>
+          </li>
+
+          <li className="header__item">
+            <Link link="#vision" title="Vision" onClick={hideMenu} />
+          </li>
+
+          {/* <li className="header__item">
+            <Link link="#innovation" title="Inovation" onClick={hideMenu} />
+          </li> */}
+
+          <li>
+            <Link link="#contact" title="Contact" onClick={hideMenu} />
+          </li>
+        </ul>
+      </nav>
+    </header>
+  )
+}
+
+
+export default React.memo(Header)

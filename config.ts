@@ -1,7 +1,7 @@
 import { SEOConfig } from './interfaces/seo'
 
 export const SEO: SEOConfig = {
-  title: 'Techmill',
+  title: 'TechMill - Automation engineering excellence',
   description: 'Boost your business with cutting-edge app technology.',
   keywords: [
     'qa',
@@ -11,7 +11,7 @@ export const SEO: SEOConfig = {
     'automation engineering',
   ],
   images: {
-    favicon: '',
+    favicon: '/static/favicon.ico',
     preview: [],
   },
 }

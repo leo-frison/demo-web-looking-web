@@ -1,0 +1,28 @@
+@import '../../styles/mixins';
+
+.customers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @include tablet {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include mobile {
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  img {
+    margin: 0 20px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+}

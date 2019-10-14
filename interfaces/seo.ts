@@ -7,5 +7,5 @@ export interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-  images?: Images;
+  images: Images;
 }
