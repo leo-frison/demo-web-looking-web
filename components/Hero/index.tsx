@@ -14,7 +14,7 @@ const Hero: React.FunctionComponent<Props> = ({ openModal }) => {
     const defaultMargin = 140
     const mobileMargin = 176;
     const componentHeight = (window.innerHeight - headerSize - defaultMargin)
-    const mobileComponentHeight = (window.outerHeight - mobileMargin)
+    const mobileComponentHeight = (window.innerHeight - mobileMargin)
 
     setHeight(isMobile ? mobileComponentHeight : componentHeight)
 
