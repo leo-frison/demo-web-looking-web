@@ -2,5 +2,5 @@
   "name": "techmill-landing",
   "scope": "techmill",
   "alias": ["techmill.nl"],
-  "regions": "bru1"
+  "regions": ["bru1", "gru1", "lhr1"]
 }
