@@ -39,13 +39,6 @@ const Clients: React.FunctionComponent = () => (
         src="/static/images/logos/rabobank.png"
         height="70"
       />
-
-      <img
-        title="Obvion"
-        alt="Obvion"
-        src="/static/images/logos/obvion.png"
-        height="80"
-      />
     </div>
   </Section>
 )
