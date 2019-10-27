@@ -81,7 +81,7 @@ const Modal: React.FunctionComponent<Props> = ({
             <div className="modal__section">
               <h2 className="modal__section-title">Apply</h2>
               <span>
-              Interested? Drop an email to <a href="mail:recruitment@techmill.nl">recruitment@techmill.nl</a>
+              Interested? Drop an email to <a href="mailto:recruitment@techmill.nl">recruitment@techmill.nl</a>
             </span>
             </div>
           </div>
