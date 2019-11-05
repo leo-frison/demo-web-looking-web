@@ -6,20 +6,20 @@ interface JobDetails {
 
 const details: JobDetails = {
   role: [
-    'Our teams are small and nimble. We work quickly and collaboratively to build elegant solutions to complex problems and are developing next generation platforms that will allow a seamless, scalable digital experience and connect our customers to every product we sell and every service we provide worldwide.',
-    'The successful candidate will act as a catalyst towards adoption of sustainable energy products. You will own the customer digital experience and foster a culture of brand ambassadorship for all retail stores by building consistent, and scalable digital experiences'
+    'As a Test Automation Engineer, you have the ability to gather information, filter it and pinpoint where the most impact can be made in regards of automation efforts. Using your excellent communication skills, you take people by the hand and motivate them to join the road to High Quality software. You think QA is more than executing tests, it\'s a mindset. You enjoy finding specific flows that no one thought of and enjoy even more automating test to ensure the quality can be measured quickly!',
+    'The successful candidate has excellent programming and communication skills, easy adaptor on both working environments as well as new tools and techniques. Doesn\'t mind joining a project where everything needs to be built from scratch.'
   ],
   requirements: [
+    'Bachelors degree, preferably in information technology',
     'Experience with object-oriented programming',
-    'Knowledge of HTTP Protocol',
-    'Experience with version control preferentially GIT',
-    'Experience with JIRA and Confluence',
-    'Experience with Agile methodology',
-    'Knowledge of data transport structures such as JSON, XML, YAML',
     'Experience with one or more of the following: Python, JavaScript, Java, and/or C#',
-    'Working knowledge of test methodologies, processes, and tools (Selenium, Appium, JIRA, STLC, Zephyr)',
-    'Experience working with client-server architectures and automation',
-    'Experience working with black box/grey box testing',
+    'Working knowledge of test methodologies, processes, and tools (Selenium, Appium, etc.)',
+    'Experience with version control preferentially GIT',
+    'Knowledge of CI/CD',
+    'Experience with Agile methodology',
+    'Knowledge of HTTP Protocol',
+    'Experience with JIRA and Confluence',
+    'Knowledge of data transport structures such as JSON, XML, YAML',
   ],
 }
 

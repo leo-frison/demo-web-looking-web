@@ -5,7 +5,7 @@ import './styles.scss'
 const Tools: React.FunctionComponent = () => (
   <Section title="Tools." theme="dark" id="tools" size="auto">
     <h2 className="tools__title">
-      Everything you need to ship<br /> a <span>high quality software</span>
+      Everything you need to ship<br /> <span>high quality software</span>
     </h2>
 
     <div className="tools">

@@ -17,12 +17,12 @@ const Contact: React.FunctionComponent = () => (
 
         <div className="contact__item">
           <h2 className="contact__title">Email</h2>
-          <a href="mailto:david@techmill.nl">david@techmill.nl</a>
+          <a href="mailto:info@techmill.nl">info@techmill.nl</a>
         </div>
 
         <div className="contact__item">
           <h2 className="contact__title">Phone</h2>
-          <span>06 448198832</span>
+          <span>+31 (0) 30 22 70 730</span>
         </div>
       </div>
 
