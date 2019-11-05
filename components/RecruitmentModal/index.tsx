@@ -3,7 +3,7 @@ import { ScrollLocky } from 'react-scroll-locky'
 // import { Formik, Form, Field, ErrorMessage } from 'formik'
 // import { CountryDropdown } from 'react-country-region-selector'
 import jobDetails from './job-description'
-// import validate from './validate';
+// import validate from './validate'
 import './styles.scss'
 
 interface Props {
@@ -34,12 +34,12 @@ const Modal: React.FunctionComponent<Props> = ({
 
     document.addEventListener('keydown', handleEsc)
     return () => document.removeEventListener('keydown', handleEsc)
-  }, []);
+  }, [])
 
-  const showModal = show ? 'modal__visible' : '';
+  const showModal = show ? 'modal__visible' : ''
   const hideModal = (hideEffect !== null && show === false)
     ? 'modal__invisible'
-    : '';
+    : ''
 
   return (
     <section className={`modal ${showModal} ${hideModal}`}>
