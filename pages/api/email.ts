@@ -54,12 +54,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const form = new multiparty.Form()
   const getFieldName = (field: any) => (name: string) => field[name][0]
 
-  form.parse(req, function(err: any, fields: any, files: any) {
+  form.parse(req, async function(err: any, fields: any, files: any) {
     if (err || !files || !files.file) return res.json({ response: 'error' })
 
-    sendEmail(getFieldName(fields), files.file[0])
+    await sendEmail(getFieldName(fields), files.file[0])
 
     res.json({ response: 'success' })
+    res.end('Message has been sent')
   })
 }
 
