@@ -9,9 +9,13 @@
   },
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
+    "@types/multiparty": "^0.0.32",
     "@types/scroll-to-element": "^2.0.0",
     "@zeit/next-sass": "^1.0.1",
+    "dotenv-webpack": "^1.7.0",
     "formik": "^1.5.8",
+    "json-form-data": "^1.5.0",
+    "multiparty": "^4.2.1",
     "next": "latest",
     "node-sass": "^4.12.0",
     "react": "^16.7.0",
@@ -21,7 +25,7 @@
     "scroll-to-element": "^2.0.3"
   },
   "devDependencies": {
-    "@types/node": "^11.13.9",
+    "@types/node": "^12.12.14",
     "@types/react": "^16.8.15",
     "@types/react-dom": "^16.0.11",
     "typescript": "3.5.2"
