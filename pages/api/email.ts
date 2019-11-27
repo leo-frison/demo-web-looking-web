@@ -9,7 +9,7 @@ const apiKey: string = process.env.SENDGRID_API_KEY || ''
 
 function encode(file: any) {
   var bitmap = fs.readFileSync(file)
-  return new Buffer(bitmap).toString('base64')
+  return Buffer.from(bitmap).toString('base64')
 }
 
 async function sendEmail(getFieldName: Function, file: any) {
@@ -54,7 +54,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     sendEmail(getFieldName(fields), files.file[0])
 
-    res.json({ response: 'success', apiKey })
+    res.json({ response: 'success' })
   })
 }
 
