@@ -1,0 +1,73 @@
+$circle-length: 151px;
+$check-length: 36px;
+
+.success {
+  animation: 1s ease-out 0s 1 both scaleAnimation;
+
+  &__result {
+    fill: lightgreen;
+    opacity: 0;
+    animation: 0.3s linear 0.9s both fadeIn;
+  }
+
+  &__circle {
+    stroke-dasharray: $circle-length $circle-length;
+    stroke: mediumseagreen;
+    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
+    0.3s linear 0.9s 1 both fadeOut;
+  }
+
+  &__check {
+    stroke-dasharray: $check-length $check-length;
+    stroke: mediumseagreen;
+    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
+    0.3s linear 0.9s 1 both fadeOut;
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: $circle-length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: $check-length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

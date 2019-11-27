@@ -9,24 +9,29 @@
   left: 0;
   z-index: 999;
   visibility: hidden;
-  opacity: 0;
+  display: none;
 
-  a {
-    color: #4364a8;
+  &__success {
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  &__error-message {
+    display: block;
+    margin-top: 38px;
+    font-size: 14px;
     font-weight: bold;
-    transition: .2s all;
-
-    &:hover {
-      opacity: .8;
-    }
+    color: #ce3b3b;
   }
 
   &__visible {
     animation: fade-in .5s forwards;
+    display: block;
   }
 
   &__invisible {
     animation: fade-out .5s forwards;
+    display: none;
   }
 
   &__wrapper {
@@ -34,7 +39,7 @@
     border-radius: 4px;
     padding: 40px 20px;
     width: 700px;
-    height: 580px;
+    height: 680px;
     overflow: scroll;
     position: absolute;
     top:0;
@@ -42,6 +47,14 @@
     left: 0;
     right: 0;
     margin: auto;
+
+    &--form {
+      height: 615px;
+    }
+
+    &--success {
+      height: 450px;
+    }
 
     @include mobile {
       width: 100%;
@@ -51,19 +64,45 @@
   }
 
   &__close {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    transition: .2s all;
     border: none;
     background: none;
-    position: absolute;
-    top: 18px;
-    right: 10px;
-    font-size: 13px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.3s all;
+    outline: none;
+    z-index: 1;
+
+    .visually-hidden {
+      display: inline-block;
+    }
 
     &:hover {
-      opacity: .6;
-      text-decoration: underline;
+      opacity: .7;
+    }
+
+    &:before, &:after  {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 3px;
+      height: 25px;
+      transform: rotate(-45deg);
+      background: silver;
+      right: 0;
+    }
+
+    &:after  {
+      transform: rotate(45deg);
+      top: 1px;
+    }
+
+    &:active {
+      transform: scale(.8);
     }
   }
 
@@ -142,6 +181,12 @@
     font-weight: 700;
     transition: .2s all;
     float: right;
+    z-index: 4;
+
+    @include mobile {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
 
     &:hover {
       background: seagreen;
@@ -149,15 +194,21 @@
   }
 
   &__form {
-    padding: 10px 20px 0;
+    padding: 10px 30px 0;
+
+    @include mobile {
+      padding: 10px 0 0;
+    }
   }
 
   &__form-inline {
     display: flex;
     justify-content: space-between;
+    box-sizing: content-box;
+    width: 100%;
 
     .modal__form-item {
-      width: 48%;
+      width: 49%;
     }
 
     input[type=text], input[type=email] {
@@ -166,27 +217,51 @@
   }
 
   &__form-item {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
     input[type=text],
     input[type=email],
-    input[type=number],
-    select {
+    input[type=number] {
       font-size: 14px;
-      padding: 5px;
-      border-radius: 2px;
+      padding: 8px;
+      border-radius: 3px;
       border: 1px solid silver;
       margin-top: 2px;
+      color: #333;
+
+      &:focus {
+        border: 1px solid #666;
+      }
     }
 
     input[type=file] {
       font-size: 14px;
+      color: #333;
       margin-top: 4px;
     }
 
     select {
-      max-height: calc(1.4em + 8px);
-      height: calc(1.4em + 8px);
+      // max-height: calc(1.4em + 8px);
+      // height: calc(1.4em + 8px);
+      margin-top: 2px;
+      border: 1px solid silver;
+      color: #333;
+      border-radius: 3px;
+      padding: 10px 5px 8px;
+      font-size: 14px;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: #fff;
+      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+      background-repeat: no-repeat, repeat;
+      background-position: right .7em top 50%, 0 0;
+      background-size: .65em auto, 100%;
+      width: 100%;
+
+      &:focus {
+        border: 1px solid #666;
+      }
     }
   }
 
@@ -200,6 +275,11 @@
     display: block;
     font-size: 14px;
     color: gray;
+
+    i {
+      font-size: smaller;
+      color: silver;
+    }
   }
 
   &__form-checkbox {
@@ -217,8 +297,12 @@
     }
   }
 
-  &__submit {
-    background: seagreen;
+  &__error {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e64242;
+    font-size: 12px;
+    vertical-align: text-bottom;
   }
 }
 
@@ -231,10 +315,9 @@
 }
 
 @keyframes fade-out {
-  from { opacity: 1 }
+  from { opacity: 1; }
   to   {
     opacity: 0;
     visibility: hidden;
-    z-index: -1;
   }
 }
