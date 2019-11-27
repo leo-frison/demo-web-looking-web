@@ -6,5 +6,5 @@ export default async function applyToJob(values: any): Promise<any> {
     body: json2formdata(values),
   })
 
-  return await data.json();
+  return await data.json()
 }

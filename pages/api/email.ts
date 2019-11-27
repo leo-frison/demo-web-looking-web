@@ -36,9 +36,7 @@ async function sendEmail(getFieldName: Function, file: any) {
     ]
   }
 
-  void(message);
-
-  // sendgrid.send(message)
+  sendgrid.send(message)
 }
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
