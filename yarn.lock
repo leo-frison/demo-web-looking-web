@@ -4050,6 +4050,10 @@ react-is@^16.8.1:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
 
+react-loading@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/react-loading/-/react-loading-2.0.3.tgz#e8138fb0c3e4674e481b320802ac7048ae14ffb9"
+
 react-locky@^1.5.2:
   version "1.5.7"
   resolved "https://registry.yarnpkg.com/react-locky/-/react-locky-1.5.7.tgz#9bacb665624a94c4d20839ff34c2e7ad5da6e141"

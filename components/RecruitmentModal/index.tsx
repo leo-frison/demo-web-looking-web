@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { ScrollLocky } from 'react-scroll-locky'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
+import ReactLoading from 'react-loading'
 import { CountryDropdown } from 'react-country-region-selector'
 import Success from './../Success'
 import jobDetails from './job-description'
@@ -30,6 +31,11 @@ const Modal: React.FunctionComponent<Props> = ({
     closeModal()
   }
 
+  const closeAndReset = () => {
+    closeModal()
+    setFormVisibility(false)
+  }
+
   React.useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
       if (event.keyCode === 27) close()
@@ -51,7 +57,7 @@ const Modal: React.FunctionComponent<Props> = ({
     <section className={`modal ${showModal} ${hideModal}`}>
       <ScrollLocky isolation={false} enabled={show}>
         <div className={`modal__wrapper ${wrapperFormClass}`}>
-          <button onClick={closeModal} className="modal__close">
+          <button onClick={closeAndReset} className="modal__close">
             <span className="visually-hidden">Close modal</span>
           </button>
 
@@ -266,7 +272,10 @@ const Modal: React.FunctionComponent<Props> = ({
                     </div>
 
                     <button className="modal__button" type="submit" disabled={isSubmitting}>
-                      Apply
+                      { isSubmitting
+                        ? <ReactLoading type="spin" color="#fff" height={20} width={20}  />
+                        : 'Apply'
+                      }
                     </button>
 
                     { feedback === 'error' && (
