@@ -24,7 +24,7 @@ const IndexPage: NextPage = () => {
     document.body.classList.add(city)
   }, [])
 
-  const [showModal, setModalVisibility] = useState(true)
+  const [showModal, setModalVisibility] = useState(false)
 
   return (
     <Layout>
