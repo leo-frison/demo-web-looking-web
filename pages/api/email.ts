@@ -54,7 +54,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     sendEmail(getFieldName(fields), files.file[0])
 
-    res.json({ response: 'success' })
+    res.json({ response: 'success', apiKey })
   })
 }
 
