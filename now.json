@@ -2,5 +2,10 @@
   "name": "techmill-landing",
   "scope": "techmill",
   "alias": ["techmill.nl"],
-  "regions": ["bru1", "gru1", "lhr1"]
+  "regions": ["bru1", "gru1", "lhr1"],
+  "build": {
+    "env": {
+      "SENDGRID_API_KEY": "@sendgrid_api_key"
+    }
+  }
 }
