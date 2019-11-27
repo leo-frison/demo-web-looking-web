@@ -48,6 +48,9 @@ const Header: React.FunctionComponent = () => {
       </nav>
 
       <nav className={`header__wrapper container ${headerWrapperClass}`}>
+        <button className="header__close" onClick={setMenuState}>
+        </button>
+
         <ul className="header__list">
           <li className="header__item">
             <Link link="#customers" title="Customers" onClick={hideMenu} />
@@ -73,10 +76,14 @@ const Header: React.FunctionComponent = () => {
             <Link link="#innovation" title="Inovation" onClick={hideMenu} />
           </li> */}
 
-          <li>
+          <li className="header__item">
             <Link link="#contact" title="Contact" onClick={hideMenu} />
           </li>
         </ul>
+
+        <h1 className="header__logo header__logo-bottom visually-hidden">
+          Techmill
+        </h1>
       </nav>
     </header>
   )
