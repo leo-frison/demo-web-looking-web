@@ -1,4 +1,3 @@
-
 interface JobDetails {
   role: string[];
   requirements: string[];

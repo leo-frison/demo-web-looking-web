@@ -18,13 +18,13 @@ const IndexPage: NextPage = () => {
       'logo-white.png'
     ].forEach(picture => new Image().src = `/static/images/${picture}`)
 
-    const cities = ['amsterdam', 'rotterdam', 'utrecht'];
-    const city = cities[Math.floor(Math.random()*cities.length)];
+    const cities = ['amsterdam', 'rotterdam', 'utrecht']
+    const city = cities[Math.floor(Math.random()*cities.length)]
 
-    document.body.classList.add(city);
+    document.body.classList.add(city)
   }, [])
 
-  const [showModal, setModalVisibility] = useState(false)
+  const [showModal, setModalVisibility] = useState(true)
 
   return (
     <Layout>
