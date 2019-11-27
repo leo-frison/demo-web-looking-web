@@ -30,18 +30,22 @@ export default function validate(values: any) {
     errors.github = 'Invalid GitHub url'
   }
 
-  // Techmill values and CV
+  // Techmill values
   const inputs: string[] = [
     'passion',
     'experience',
     'communication',
     'share',
-    'file',
   ]
 
   inputs.forEach(item => {
     if (!values[item]) errors[item] = 'Required'
   })
+
+  // File
+  if (!values.file.name) {
+    errors.file = 'Required'
+  }
 
   return errors
 }

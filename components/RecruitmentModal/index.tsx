@@ -106,16 +106,16 @@ const Modal: React.FunctionComponent<Props> = ({
             <div className="modal__form">
               <Formik
                 initialValues={{
-                  name: 'Guilherme',
-                  email: 'g@dd.com',
-                  country: 'Brazil',
-                  linkedin: 'linkedin.com',
+                  name: '',
+                  email: '',
+                  country: '',
+                  linkedin: '',
                   github: '',
                   file: {},
-                  passion: true,
-                  experience: true,
-                  communication: true,
-                  share: true,
+                  passion: false,
+                  experience: false,
+                  communication: false,
+                  share: false,
                 }}
                 validate={validate}
                 onSubmit={async (values: any, { setSubmitting }) => {
