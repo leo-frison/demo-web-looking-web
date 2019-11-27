@@ -44,3 +44,22 @@ declare module 'react-country-region-selector' {
 
   export { CountryDropdown, RegionDropdown, CountryRegionData };
 }
+
+declare module 'json-form-data' {
+  interface ValidJSON {
+    [key: string]: ValidJSON | ValidJSONValue | ValidJSONValue[] | FileList;
+  }
+
+  type ValidJSONValue = string | number | boolean | File | Blob | Date | null | undefined;
+
+  interface FormatOptions {
+    showLeafArrayIndexes?: boolean;
+    includeNullValues?: boolean;
+    mapping?: (value: ValidJSONValue) => string | Blob;
+  }
+
+  declare const asFormData: FormDataFormatter;
+  type FormDataFormatter = (json: ValidJSON, opts?: FormatOptions) => FormData;
+
+  export = asFormData;
+}
