@@ -37,8 +37,8 @@ async function sendEmail(getFieldName: Function, file: any) {
   }
 
   try {
-    const data = await sendgrid.send(message)
-    console.log(data)
+    await sendgrid.send(message)
+    console.log(apiKey)
   } catch (e) {
     console.error(e);
   }
