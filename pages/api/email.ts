@@ -8,7 +8,7 @@ const templateId = 'd-2d01c331be204df39e564173070e5829'
 const apiKey: string = process.env.SENDGRID_API_KEY || ''
 
 function encode(file: any) {
-  var bitmap = fs.readFileSync(file)
+  const bitmap = fs.readFileSync(file)
   return Buffer.from(bitmap).toString('base64')
 }
 
