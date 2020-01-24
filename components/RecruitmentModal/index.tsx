@@ -27,6 +27,7 @@ const Modal: React.FunctionComponent<Props> = ({
   }
 
   const close = () => {
+    setFeedback(null)
     setHideEffect(true)
     closeModal()
   }
@@ -124,8 +125,9 @@ const Modal: React.FunctionComponent<Props> = ({
                   share: false,
                 }}
                 validate={validate}
-                onSubmit={async (values: any, { setSubmitting }) => {
+                onSubmit={async (values: any, { setSubmitting, resetForm }) => {
                   const { response } = await api(values)
+                  resetForm({})
                   setFeedback(response)
                   setSubmitting(false)
                 }}
