@@ -33,6 +33,7 @@ const Modal: React.FunctionComponent<Props> = ({
   }
 
   const closeAndReset = () => {
+    setFeedback(null)
     closeModal()
     setFormVisibility(false)
   }
