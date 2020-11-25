@@ -65,10 +65,10 @@ const Modal: React.FunctionComponent<Props> = ({
 
           <header className="modal__header">
             <img
-              title="Techmill"
+              title="LookingWeb"
               alt="Techmill"
-              src="/static/images/logo-original.png"
-              height="20"
+              src="/static/images/logo.png"
+              height="300px"
             />
             <h1 className="modal__title">Automation Engineer</h1>
           </header>

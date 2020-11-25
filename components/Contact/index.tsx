@@ -3,11 +3,11 @@ import Section from '../Section'
 import './styles.scss'
 
 const Contact: React.FunctionComponent = () => (
-  <Section title="Contact." id="contact" size="auto" theme="dark">
+  <Section title="Contacto" id="contact" size="auto" theme="dark">
     <div className="contact">
       <div className="contact__items">
         <div className="contact__item">
-          <h2 className="contact__title">Address</h2>
+          <h2 className="contact__title">Direccion</h2>
           <span>
             Tractieweg, 41<br />
             3534 AP, Utrecht <br />
@@ -17,11 +17,11 @@ const Contact: React.FunctionComponent = () => (
 
         <div className="contact__item">
           <h2 className="contact__title">Email</h2>
-          <a href="mailto:info@techmill.nl">info@techmill.nl</a>
+          <a href="mailto:info@techmill.nl">info@lookingweb.nl</a>
         </div>
 
         <div className="contact__item">
-          <h2 className="contact__title">Phone</h2>
+          <h2 className="contact__title">Telefono</h2>
           <span>+31 (0) 30 22 70 730</span>
         </div>
       </div>

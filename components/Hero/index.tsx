@@ -26,17 +26,17 @@ const Hero: React.FunctionComponent<Props> = ({ openModal }) => {
       style={{ height }}
     >
       <h2 className="hero__title">
-        We are hiring people
+        La mejor opcion
       </h2>
       <h2 className="hero__title hero__title--second">
-        to take automation engineering
+        en desarrollo web
       </h2>
       <h2 className="hero__title hero__title--third">
-        to a whole <span className="hero__gradient">new level</span>
+         <span className="hero__gradient">en la ciudad de La Plata</span>
       </h2>
 
       <a href="#" onClick={openModal} className="hero__button">
-        Apply now!
+        Aplica Ahora !!!
       </a>
 
       <div className="hero__arrow">

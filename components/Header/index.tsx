@@ -53,19 +53,19 @@ const Header: React.FunctionComponent = () => {
 
         <ul className="header__list">
           <li className="header__item">
-            <Link link="#customers" title="Customers" onClick={hideMenu} />
+            <Link link="#customers" title="Clientes" onClick={hideMenu} />
           </li>
 
           <li className="header__item">
-            <Link link="#tools" title="Tools" onClick={hideMenu} />
+            <Link link="#tools" title="Herramientas" onClick={hideMenu} />
           </li>
 
           {/* <li className="header__item">
-            <Link link="#vision" title="Vision" onClick={hideMenu} />
+            <Link link="#vision" title="Nuestra Vision" onClick={hideMenu} />
           </li> */}
 
           <li className="header__item header__margin">
-            <h1 className="header__logo visually-hidden">Techmill</h1>
+            <h1 className="header__logo visually-hidden">LookingWeb</h1>
           </li>
 
           <li className="header__item">
@@ -77,7 +77,7 @@ const Header: React.FunctionComponent = () => {
           </li> */}
 
           <li className="header__item">
-            <Link link="#contact" title="Contact" onClick={hideMenu} />
+            <Link link="#contact" title="Contacto" onClick={hideMenu} />
           </li>
         </ul>
 

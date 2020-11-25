@@ -3,29 +3,29 @@ import Section from '../Section'
 import './styles.scss'
 
 const Vision: React.FunctionComponent = () => (
-  <Section title="Vision." id="vision" size="auto">
+  <Section title="Nuestra Vision" id="vision" size="auto">
     <div className="vision">
       <img src="/static/images/vision.png" height={300} />
 
       <div className="vision__list">
         <div className="vision__item">
           <div className="vision__content">
-            <h2 className="vision__title">Focus</h2>
-            <span>The world of IT is constantly changing. TechMill focusses on ensuring our employees keep up with the latest technologies and tools. We do this by creating a relaxed working environment where everything can be asked without feeling embarrassed. Going to (international) conferences and support courses by having a study budget of 3000 Euro and 5 days. Moreover TechMill organizes 3 'innovation days' per year at the TechMill office to try out something new, share knowledge and connect with colleagues.</span>
+            <h2 className="vision__title">Nuestro Enfoque</h2>
+            <span>El mundo de las tecnologías de la información cambia constantemente. En LookingWeb nos enfocamos en asegurar que nuestros empleados estén al día con las últimas tecnologías y herramientas. Hacemos esto creando un ambiente de trabajo relajado donde todo se puede preguntar sin sentir vergüenza. Asistir a congresos (internacionales) y cursos de apoyo teniendo un presupuesto de estudios de 3000 euros y 5 días. Además, LookingWeb organiza 3 'días de innovación' al año en nuestras oficinas para probar algo nuevo, compartir conocimientos y conectarse con nuevos colegas.</span>
           </div>
         </div>
 
         <div className="vision__item">
           <div className="vision__content">
-            <h2 className="vision__title">Fun</h2>
-            <span>Happy employees deliver good work. This is truly something TechMill believes in and will try its best to help wherever they can. A max of 25 employees, makes sure we keep it personal and flexible in any way possible. Employees are involved in the choice of fun activities and conferences. Are we going skiing in the Alps or surfing in Portugal?</span>
+            <h2 className="vision__title">Felicidad</h2>
+            <span>Los empleados felices realizan un buen trabajo. Esto es realmente algo en lo que creemos en LookingWeb y haremos todo lo posible para ayudar donde sea posible. Un máximo de 25 empleados, nos asegura de que lo mantengamos personal y flexible de cualquier manera posible. Los empleados participan en la elección de actividades divertidas y conferencias. ¿Vamos a esquiar en los Alpes o surfear en Portugal?</span>
           </div>
         </div>
 
         <div className="vision__item">
         <div className="vision__content">
-          <h2 className="vision__title">More than work</h2>
-          <span>Since TechMill is all about the best international Test Automation Engineers, we understand that moving or living in a new country can be hard. That's why we're offering support with housing, taxes or any other things that may appear overwhelming.</span>
+          <h2 className="vision__title">Algo mas que un trabajo</h2>
+          <span>Dado que en LookingWeb tratamos con los mejores ingenieros de automatización de pruebas internacionales, entendemos que mudarse o vivir en un nuevo país puede ser difícil. Es por eso que ofrecemos apoyo con vivienda, impuestos o cualquier otra cosa que pueda parecer abrumadora.</span>
         </div>
       </div>
       </div>

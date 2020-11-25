@@ -169,9 +169,9 @@
 
   &__logo {
     display: block;
-    background: url('/static/images/logo-white.png') no-repeat;
+    background: url('/static/images/logo.png') no-repeat;
     background-size: contain;
-    width: 300px;
+    width: 110px;
 
     @include tablet {
       width: 150px;

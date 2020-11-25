@@ -3,9 +3,9 @@ import Section from '../Section'
 import './styles.scss'
 
 const Tools: React.FunctionComponent = () => (
-  <Section title="Tools." theme="dark" id="tools" size="auto">
+  <Section title="Herramientas" theme="dark" id="tools" size="auto">
     <h2 className="tools__title">
-      Everything you need to ship<br /> <span>high quality software</span>
+      Usamos el mejor Software del Mercado que nos permite realizar<br /> <span>CI/CD</span>
     </h2>
 
     <div className="tools">

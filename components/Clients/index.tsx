@@ -3,7 +3,7 @@ import Section from '../Section'
 import './styles.scss'
 
 const Clients: React.FunctionComponent = () => (
-  <Section title="Customers." size="auto" id="customers">
+  <Section title="Clientes" size="auto" id="customers">
     <div className="customers">
       <img
         title="KLM"

@@ -15,7 +15,7 @@ const IndexPage: NextPage = () => {
       'background-utrecht.jpg',
       'background-amsterdam.jpg',
       'background-rotterdam.jpg',
-      'logo-white.png'
+      'logo.png'
     ].forEach(picture => new Image().src = `/static/images/${picture}`)
 
     const cities = ['amsterdam', 'rotterdam', 'utrecht']
