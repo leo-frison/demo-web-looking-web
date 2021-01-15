@@ -3,7 +3,8 @@
   "version": "1.1.0",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
+    "deploy": "npm run build && npm run export",
     "start": "next start",
     "type-check": "tsc"
   },
@@ -26,10 +27,10 @@
     "scroll-to-element": "^2.0.3"
   },
   "devDependencies": {
-    "@types/node": "^12.12.14",
+    "@types/node": "^14.14.10",
     "@types/react": "^16.8.15",
     "@types/react-dom": "^16.0.11",
-    "typescript": "3.5.2"
+    "typescript": "^4.1.2"
   },
   "license": "ISC"
 }
